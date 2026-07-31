@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora - Online Store | Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="Style Velora.css" rel="stylesheet">
+
+    <style>
+        .product-card {
+            background-color: transparent;
+            border: 1px solid #666;
+            border-radius: 0;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            border-color: #d1b86c;
+        }
+        .text-gold {
+            color: #d1b86c !important; 
+        }
+        .btn-velora-gold {
+            background-color: #d1b86c;
+            border-color: #d1b86c;
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 0;
+        }
+        .btn-velora-gold:hover {
+            background-color: #bfa55a;
+            border-color: #bfa55a;
+        }
+        .btn-velora-light {
+            background-color: white;
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand text-gold fw-bold fs-3" href="index Velora1.html">VELORA</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#veloraNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="veloraNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase fw-semibold">
+                    <li class="nav-item"><a class="nav-link active text-gold" href="index Velora1.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop Velora1.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women Velora1.html">Women</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men Velora1.html">Men</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kids Velora1.html">Kids</a></li>
+                    <li class="nav-item"><a class="nav-link" href="new-arrivals Velora1.html">New Arrivals</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3 text-white">
+                    <!-- خانة البحث -->
+                    <div class="input-group input-group-sm">
+                        <input id="search-input" type="text" class="form-control bg-dark text-white border-secondary" placeholder="Search...">
+                        <button class="btn btn-outline-secondary text-gold"><i class="bi bi-search"></i></button>
+                    </div>
+                    
+                    <!-- أيقونة الحساب (تسجيل الدخول) -->
+                    <a href="login Velora.html" class="text-white nav-link fs-5" title="login"><i class="bi bi-person"></i></a>
+                    
+                    <!-- أيقونة المفضلة -->
+                    <a href="wishlist Velora.html" class="text-white nav-link fs-5" title="favourite"><i class="bi bi-heart"></i></a>
+                    
+                    <!-- أيقونة السلة -->
+                    <a href="cart Velora1.html" class="text-white position-relative fs-5 nav-link" title="cart">
+                        <i class="bi bi-cart3"></i>
+                        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">3</span>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-banner py-5 bg-black">
+        <div class="container text-center">
+            <div class="row align-items-center p-5 rounded-4 shadow-lg position-relative overflow-hidden" 
+                 style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80') center/cover no-repeat; min-height: 420px;">
+                
+                <div class="col-12 z-3">
+                    <h1 class="display-1 fw-bolder tracking-tight text-white mb-2" style="letter-spacing: 3px;">
+                        SUMMER <span class="text-gold">SALE</span>
+                    </h1>
+                    <p class="lead fs-2 fw-semibold text-light mb-4">UP TO 50% OFF</p>
+                    <a href="shop Velora1.html" class="btn btn-velora-gold btn-lg px-5 py-3 fw-bold text-uppercase shadow text-decoration-none">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="new-arrivals py-5">
+        <div class="container text-center">
+            <h2 class="text-uppercase fw-bold mb-5 fs-1 text-white">NEW ARRIVALS</h2>
+            
+            <!-- شبكة المنتجات (منتظمة بجانب بعضها) -->
+            <div id="product-grid" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center px-2">
+                <!-- المنتجات ستُضاف تلقائياً من الجافاسكريبت هنا -->
+            </div>
+            
+            <!-- زر عرض كل المنتجات -->
+            <div class="text-center mt-5">
+                <a href="shop Velora1.html" class="btn btn-velora-light btn-lg px-5 text-decoration-none">Browse All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4 border-top border-secondary mt-5">
+        <div class="container">
+            <p class="mb-1 text-white-50">
+                All Rights Reserved &copy; 2026 For website
+                <span class="text-gold fw-bold">VELORA</span>
+            </p>
+            <p class="mb-0 fs-6">
+                Developed and Designed by 💻 ✨ 
+                <span class="text-gold fw-bold border-bottom border-warning pb-1 ms-1">
+                   Eman Ahmad
+                </span>
+            </p>
+        </div>
+    </footer>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script Velora1.js"></script>
+
+    <script>
+    function viewProduct(name, price, image) {
+        const product = { name: name, price: price, image: image };
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+        window.location.href = 'product-details Velora.html';
+    }
+</script>
+
+</body>
+</html>

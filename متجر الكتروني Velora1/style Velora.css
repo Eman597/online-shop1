@@ -1,0 +1,119 @@
+
+:root {
+    --velora-gold: #d1b86c; /* تحديد اللون الذهبي  */
+    --velora-bg-dark: #111; /* خلفية New Arrivals  */
+}
+
+body {
+    font-family: 'Cairo', sans-serif; /*خط عربي  */
+    overflow-x: hidden;
+}
+
+.text-gold {
+    color: var(--velora-gold) !important;
+}
+
+/* ============================================
+   2. تنسيقات الـ NAVBAR (شريط التنقل)
+   ============================================ */
+.navbar-dark .navbar-brand {
+    color: var(--velora-gold); /* اللوجو باللون  */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+/*  Hover على روابط القائمة */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--velora-gold);
+}
+
+.bi-cart3, .bi-heart, .bi-person {
+    transition: color 0.3s ease;
+}
+
+.bi-cart3:hover, .bi-heart:hover, .bi-person:hover {
+    color: var(--velora-gold);
+}
+
+/* ============================================
+   3. تنسيقات الـ HERO BANNER
+   ============================================ */
+.hero-banner-content {
+    background-color: #f7f7f7; /* خلفية البانر  */
+}
+
+.hero-sale-bg {
+    transition: transform 0.3s ease;
+}
+
+.hero-sale-bg:hover {
+    transform: translateY(-5px); /* تأثير  عند الوقوف بالماوس */
+}
+
+/* تخصيص الأزرار الذهبية */
+.btn-velora-gold {
+    background-color: var(--velora-gold);
+    border-color: var(--velora-gold);
+    color: black;
+    border-radius: 0; 
+    transition: all 0.3s ease;
+}
+
+.btn-velora-gold:hover {
+    background-color: #bfa55a;
+    border-color: #bfa55a;
+    color: black;
+    transform: scale(1.05); /* تكبير للزر */
+}
+
+/* تخصيص الأزرار الفاتحة */
+.btn-velora-light {
+    background-color: white;
+    color: black;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-velora-light:hover {
+    background-color: var(--velora-gold);
+    color: black;
+}
+
+/* ============================================
+   4. تنسيقات قسم NEW ARRIVALS (المنتجات)
+   ============================================ */
+.new-arrivals {
+    background-color: #000; /* خلفية سوداء  */
+}
+
+/* تنسيق كرت المنتج */
+.product-card {
+    background-color: transparent;
+    border: 1px solid #444; /* حدود خفيفة */
+    border-radius: 0;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Hover على كرت المنتج */
+.product-card:hover {
+    border-color: var(--velora-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(209, 184, 108, 0.3); /* ظل ذهبي خفيف */
+}
+
+/* تنسيق النجوم الذهبية */
+.rating i {
+    color: var(--velora-gold);
+    font-size: 0.9rem;
+}
+
+/* تخصيص السعر */
+.price {
+    font-size: 1.1rem;
+    color: white;
+}

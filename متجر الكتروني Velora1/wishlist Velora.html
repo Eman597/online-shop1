@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora - Wishlist</title>
+    
+    <!-- ربط Bootstrap و الأيقونات -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="Style Velora.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+
+    <!-- القائمة العلوية (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand text-warning fw-bold fs-3" href="index Velora1.html" style="color: #d1b86c !important;">VELORA</a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="index Velora1.html" class="text-white nav-link">Home</a>
+                <a href="shop Velora1.html" class="text-white nav-link">Shop</a>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="container py-5">
+        <h2 class="text-uppercase fw-bold text-center mb-5" style="color: #d1b86c;">My Wishlist </h2>
+        
+       
+        <div id="wishlist-container" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+           
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="shop Velora1.html" class="btn fw-bold text-dark px-5 py-2" style="background-color: #d1b86c; border-color: #d1b86c;">العودة للتسوق</a>
+        </div>
+    </div>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('wishlist-container');
+          
+            const wishlist = JSON.parse(localStorage.getItem('veloraWishlist')) || [];
+
+            if (wishlist.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center fs-5 w-100">No items in your Wishlist yet.</p>';
+                return;
+            }
+
+            container.innerHTML = '';
+           
+            wishlist.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-md-4';
+                col.innerHTML = `
+                    <div class="card bg-dark text-white p-3 border-secondary h-100 d-flex flex-column justify-content-between" style="border-radius: 0;">
+                        <div>
+                            <img src="${product.image}" class="card-img-top mb-3 img-fluid" alt="${product.name}" style="height: 220px; object-fit: cover;">
+                            <h6 class="fw-semibold text-truncate mb-2 text-uppercase">${product.name}</h6>
+                            <p class="fw-bold" style="color: #d1b86c;">${product.price}</p>
+                        </div>
+                        <button class="btn btn-outline-danger btn-sm w-100 mt-2 rounded-0" onclick="removeItem('${product.name}')">Remove from wishlist</button>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        });
+
+        // دالة لحذف المنتج لو العميل حابب يشيله من المفضلة
+        function removeItem(name) {
+            let wishlist = JSON.parse(localStorage.getItem('veloraWishlist')) || [];
+            wishlist = wishlist.filter(item => item.name !== name);
+            localStorage.setItem('veloraWishlist', JSON.stringify(wishlist));
+            location.reload(); 
+        }
+    </script>
+    </body>
+    </html>

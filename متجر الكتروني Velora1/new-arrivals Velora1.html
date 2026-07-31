@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora - New Arrivals</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="Style Velora.css">
+    
+    <style>
+        body {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+        .text-gold { color: #d1b86c !important; }
+        .btn-velora-gold {
+            background-color: #d1b86c; border-color: #d1b86c; color: black;
+            text-transform: uppercase; font-weight: bold; border-radius: 0;
+        }
+        .btn-velora-gold:hover { background-color: #bfa55a; border-color: #bfa55a; }
+        .product-card { 
+            background-color: #111; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            border-color: #d1b86c;
+            transform: translateY(-5px);
+        }
+        
+        /* Carousel Banner */
+        .carousel-item {
+            height: 60vh;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 border-bottom border-secondary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-gold tracking-widest" href="index Velora1.html">VELORA</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index Velora1.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop Velora1.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women Velora1.html">Women</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men Velora1.html">Men</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kids Velora1.html">Kids</a></li>
+                    <li class="nav-item"><a class="nav-link active text-gold" href="new-arrivals Velora1.html">New Arrivals</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <div class="input-group input-group-sm" style="width: 140px;">
+                        <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="search...">
+                    </div>
+                    <a href="login Velora.html" class="text-white fs-5" title="login"><i class="bi bi-person"></i></a>
+                    <a href="wishlist Velora.html" class="text-white fs-5" title="favourite"><i class="bi bi-heart"></i></a>
+                    <a href="cart Velora1.html" class="text-white fs-5 position-relative" title="cart">
+                        <i class="bi bi-cart3"></i>
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.65rem;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div id="newArrivalsCarousel" class="carousel slide border-bottom border-secondary" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <span class="badge bg-warning text-dark fs-6 mb-2 text-uppercase fw-bold">Summer Collection 2026</span>
+                    <h1 class="display-4 fw-bold text-uppercase text-gold mb-2">Luxury Summer Fashion</h1>
+                    <p class="lead mb-4">Discover Linen Designs, Trendy & Exclusive Style</p>
+                    <a href="#new-products" class="btn btn-velora-gold btn-lg px-4 fw-bold">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <span class="badge bg-warning text-dark fs-6 mb-2 text-uppercase fw-bold">New Trends</span>
+                    <h1 class="display-4 fw-bold text-uppercase text-gold mb-2">Luxury Men's Looks</h1>
+                    <p class="lead mb-4">The Finest Suits & Casual Jackets This Season</p>
+                    <a href="#new-products" class="btn btn-velora-gold btn-lg px-4 fw-bold">Explore the Collection</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <span class="badge bg-warning text-dark fs-6 mb-2 text-uppercase fw-bold">Exclusive Offer</span>
+                    <h1 class="display-4 fw-bold text-uppercase text-gold mb-2">Discounts Up To 50%</h1>
+                    <p class="lead mb-4">On Selected Items From The Kids & Women's Collection</p>
+                    <a href="#new-products" class="btn btn-velora-gold btn-lg px-4 fw-bold">Get Yours Now</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- PRODUCTS GRID SECTION -->
+    <div class="container my-5" id="new-products">
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-2">
+            <h3 class="fw-bold text-uppercase text-white">New Arrivals </h3>
+            <span class="text-gold fw-semibold">🔥 Exclusive & Limited</span>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            
+            <!-- Product 1 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Men's Classic Tailored Suit">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Men</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Men's Classic Tailored Suit</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">1250 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Men\'s Classic Tailored Suit', '1250 EGP', 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Men\'s Classic Tailored Suit', '1250 EGP', 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Women's Elegant Evening Gown">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Women</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Women's Elegant Evening Gown</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">980 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Women\'s Elegant Evening Gown', '980 EGP', 'https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Women\'s Elegant Evening Gown', '980 EGP', 'https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=500" 
+                            class="w-100 h-100 object-fit-cover"
+                             alt="Men's Casual Leather Jacket"
+                             style="cursor: pointer;"
+                             onclick="viewProduct('Men\'s Casual Leather Jacket', '1100 EGP', 'http://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?...') ">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Men</span>
+                            <h6 style="cursor:pointer;" 
+                            class="fw-semibold mb-1 text-white text-truncate"
+                            onclick="viewProduct('Men\'s Casual Leather Jacket', '1100 EGP', 'http://images.pexels.com/photos/1124468/pexels-photo1124468.jpeg?...')">Men's Casual Leather Jacket</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">1100 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Men\'s Casual Leather Jacket', '1100 EGP', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Men\'s Casual Leather Jacket', '1100 EGP', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Women's Stylish Summer Dress">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Women</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Women's Stylish Summer Dress</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">720 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Women\'s Stylish Summer Dress', '720 EGP', 'https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Women\'s Stylish Summer Dress', '720 EGP', 'https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Kids Colorful Casual Outfit">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Kids</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Kids Colorful Casual Outfit</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">380 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Kids Colorful Casual Outfit', '380 EGP', 'https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Kids Colorful Casual Outfit', '380 EGP', 'https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Men's Formal White Shirt">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Men</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Men's Formal White Shirt</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">490 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Men\'s Formal White Shirt', '490 EGP', 'https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Men\'s Formal White Shirt', '490 EGP', 'https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Women's Chic Blouse & Pants">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Women</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Women's Chic Blouse & Pants</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">830 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Women\'s Chic Blouse & Pants', '830 EGP', 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Women\'s Chic Blouse & Pants', '830 EGP', 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/3933239/pexels-photo-3933239.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Kids Sporty Tracksuit">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Kids</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Kids Sporty Tracksuit</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">420 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Kids Sporty Tracksuit', '420 EGP', 'https://images.pexels.com/photos/3933239/pexels-photo-3933239.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Kids Sporty Tracksuit', '420 EGP', 'https://images.pexels.com/photos/3933239/pexels-photo-3933239.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col">
+                <div class="product-card p-3 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <span class="badge bg-warning text-dark mb-2 position-absolute top-0 start-0 m-3" style="z-index: 2;">NEW</span>
+                        <div style="height: 230px; overflow: hidden;" class="mb-3 bg-dark rounded">
+                            <img src="https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=500" class="w-100 h-100 object-fit-cover" alt="Men's Urban Denim Jeans">
+                        </div>
+                        <div class="product-details text-start text-white text-uppercase" style="font-size: 0.8rem;">
+                            <span class="text-gold fw-bold" style="font-size: 0.7rem;">Men</span>
+                            <h6 class="fw-semibold mb-1 text-white text-truncate">Men's Urban Denim Jeans</h6>
+                            <div class="rating mb-1 text-gold" style="font-size: 0.75rem;">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="price fw-bold text-white mb-2" style="font-size: 1rem;">600 EGP</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-velora-gold w-75 rounded-0 py-1" onclick="addToCart('Men\'s Urban Denim Jeans', '600 EGP', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=500')">Add to Cart</button>
+                        <button class="btn btn-outline-warning w-25 rounded-0 py-1" style="border-color: #d1b86c; color: #d1b86c;" onclick="addToWishlist('Men\'s Urban Denim Jeans', '600 EGP', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=500')" title="أضف للمفضلة">
+                           <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('veloraCart')) || [];
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: name, price: price, image: image, quantity: 1 });
+            }
+            localStorage.setItem('veloraCart', JSON.stringify(cart));
+            updateCartBadge();
+            alert('Added to Cart Successfully!');
+        }
+
+        function addToWishlist(name, price, image) {
+            let wishlist = JSON.parse(localStorage.getItem('veloraWishlist')) || [];
+            const exists = wishlist.some(item => item.name === name);
+            if (!exists) {
+                wishlist.push({ name: name, price: price, image: image });
+                localStorage.setItem('veloraWishlist', JSON.stringify(wishlist));
+            }
+            window.location.href = 'wishlist Velora.html';
+        }
+
+        function updateCartBadge() {
+            let cart = JSON.parse(localStorage.getItem('veloraCart')) || [];
+            let totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badge = document.getElementById('cart-badge');
+            if (badge) {
+                badge.innerText = totalCount;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white text-center py-4 border-top border-secondary mt-5">
+        <div class="container">
+            <p class="mb-1 text-white-50">
+               All Rights Reserved &copy; 2026 For Website <span class="text-gold fw-bold">VELORA</span>
+            </p>
+            <p class="mb-0 fs-6">
+               Developed and Designed by 💻 ✨ 
+                <span class="text-gold fw-bold border-bottom border-warning pb-1 ms-1">
+                   Eman Ahmad
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    function viewProduct(name, price, image) {
+        const product = { name: name, price: price, image: image };
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+        window.location.href = 'product-details Velora.html';
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // نختار كل كروت المنتجات في الصفحة
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+            // جعل كارت المنتج بأكمله قابلاً للنقر وتغيير شكل الماوس ليد
+            card.style.cursor = 'pointer';
+
+            card.addEventListener('click', function(e) {
+                // منع الضغط إذا كان المستخدم يضغط على زر "Add to Cart" أو "Wishlist" لكي لا ينتقل بالغلط
+                if (e.target.closest('button')) return;
+
+                // استخراج بيانات المنتج من داخل الكارت الحالي تلقائياً
+                const nameElement = card.querySelector('h6, h5, .product-title');
+                const priceElement = card.querySelector('.price');
+                const imgElement = card.querySelector('img');
+
+                const name = nameElement ? nameElement.innerText.trim() : 'Product Name';
+                const price = priceElement ? priceElement.innerText.trim() : '0 EGP';
+                const image = imgElement ? imgElement.src : '';
+
+                // حفظ البيانات في الذاكرة والانتقال لصفحة التفاصيل
+                const product = { name: name, price: price, image: image };
+                localStorage.setItem('selectedProduct', JSON.stringify(product));
+                
+                window.location.href = 'product-details Velora1.html';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
